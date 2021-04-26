@@ -641,7 +641,7 @@ interface PixelSVGElement extends HTMLElement
 				{
 					const i = ( base + x ) * 4;
 					if ( !transparent && pixels[ i + 3 ] <= 0 ) { continue; }
-					const alpha = pixels[ i + 3 ] < 256 ? pixels[ i + 3 ].toString( 16 ).padStart( 2, '0' ) : '';
+					const alpha = pixels[ i + 3 ] < 255 ? pixels[ i + 3 ].toString( 16 ).padStart( 2, '0' ) : '';
 					this.draw( x, y, 1, 1, '#' +
 						pixels[ i ].toString( 16 ).padStart( 2, '0' ) +
 						pixels[ i + 1 ].toString( 16 ).padStart( 2, '0' ) +
